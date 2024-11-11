@@ -19,6 +19,3 @@ services:
       - FLASK_APP=app.py
       - FLASK_ENV=production
       - DATABASE_URL=postgresql://your_user:your_password@your_rds_endpoint:5432/your_db_name
-
-volumes:
-  postgres-data:
