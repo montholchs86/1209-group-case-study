@@ -19,19 +19,6 @@ services:
       - FLASK_APP=app.py
       - FLASK_ENV=production
       - DATABASE_URL=postgresql://your_user:your_password@your_rds_endpoint:5432/your_db_name
-    depends_on:
-      - postgres
-
-  postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_DB: your_db_name
-      POSTGRES_USER: your_user
-      POSTGRES_PASSWORD: your_password
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
 
 volumes:
   postgres-data:
