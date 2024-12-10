@@ -11,7 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Copy the rest of the application files into the container
-COPY . .
+COPY . /app
 
 # Expose the port the app runs on
 EXPOSE 3000
